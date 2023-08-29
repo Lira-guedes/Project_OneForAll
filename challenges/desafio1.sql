@@ -36,7 +36,7 @@ VALUES
 
 ---- USUARIOS
 CREATE TABLE IF NOT EXISTS SpotifyClone.usuarios (
-      INT NOT NULL AUTO_INCREMENT,
+    id_usuario  INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
     idade INT NOT NULL,
     id_plano INT NOT NULL,
