@@ -108,14 +108,14 @@ VALUES
 CREATE TABLE IF NOT EXISTS SpotifyClone.historico (
     id_cancoes INT NOT NULL,
     id_usuario INT NOT NULL,
-    data_reproduçao DATETIME NOT NULL,
+    data_reproducao DATETIME NOT NULL,
     PRIMARY KEY (id_cancoes, id_usuario),
-    UNIQUE (id_usuario, id_cancoes, data_reproduçao),
+    UNIQUE (id_usuario, id_cancoes, data_reproducao),
      FOREIGN KEY (id_cancoes) REFERENCES SpotifyClone.cancoes(id_cancoes),
      FOREIGN KEY (id_usuario) REFERENCES SpotifyClone.usuarios(id_usuario)
 ) engine = InnoDB;
 
-INSERT INTO SpotifyClone.historico (id_cancoes, id_usuario, data_reproduçao)
+INSERT INTO SpotifyClone.historico (id_cancoes, id_usuario, data_reproducao)
 VALUES
 	(8, 1, '2022-02-28 10:45:55'),
 	(2, 1, '2020-05-02 05:30:35'),
