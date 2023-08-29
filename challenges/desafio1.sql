@@ -84,13 +84,13 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.cancoes (
     id_cancoes INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
     id_album INT NOT NULL,
-    duraçao INT NOT NULL,
+    duracao INT NOT NULL,
     ano_lançamento YEAR NOT NULL,
     PRIMARY KEY (id_cancoes),
      FOREIGN KEY (id_album) REFERENCES SpotifyClone.album(id_album),
 ) engine = InnoDB;
 
-INSERT INTO SpotifyClone.cancoes (nome, id_album, duraçao, ano_lançamento)
+INSERT INTO SpotifyClone.cancoes (nome, id_album, duracao, ano_lançamento)
 VALUES
 	('BREAK MY SOUL', 1, 279, 2022),
 	("VIRGO\'S GROOVE", 1, 369, 2022),
