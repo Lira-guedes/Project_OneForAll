@@ -1,7 +1,6 @@
 DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE IF NOT EXISTS SpotifyClone;
 
----- PLANO
 CREATE TABLE IF NOT EXISTS SpotifyClone.planos (
     id_plano INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(20) NOT NULL,
@@ -17,7 +16,6 @@ VALUES
   ('pessoal', 6.99);
 
 
----- ARTISTAS
 CREATE TABLE IF NOT EXISTS SpotifyClone.artistas (
     id_artista INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
@@ -34,7 +32,6 @@ VALUES
   ('Nina Simone');
 
 
----- USUARIOS
 CREATE TABLE IF NOT EXISTS SpotifyClone.usuarios (
     id_usuario  INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
@@ -49,16 +46,15 @@ INSERT INTO SpotifyClone.usuarios (nome, idade, id_plano, data_assinatura)
 VALUES
 	('Barbara Liskov', 82, 1, '2019-10-20'),
 	('Robert Cecil Martin', 58, 1, '2017-01-06'),
-    ('Ada Lovelace', 37, 4, '2017-12-30'),
-    ('Martin Fowler', 46, 4, '2017-01-17'),
-    ('Sandi Metz', 58, 4, '2018-04-29'),
-    ('Paulo Freire', 19, 2, '2018-02-14'),
-    ('Bell Hooks', 26, 2, '2018-01-05'),
-    ('Christopher Alexander', 85, 3, '2019-06-05'),
-    ('Judith Butler', 45, 3, '2020-05-13'),
-    ('Jorge Amado', 58, 3, '2017-02-17');
+    ('Ada Lovelace', 37, 2, '2017-12-30'),
+    ('Martin Fowler', 46, 2, '2017-01-17'),
+    ('Sandi Metz', 58, 2, '2018-04-29'),
+    ('Paulo Freire', 19, 3, '2018-02-14'),
+    ('Bell Hooks', 26, 3, '2018-01-05'),
+    ('Christopher Alexander', 85, 4, '2019-06-05'),
+    ('Judith Butler', 45, 4, '2020-05-13'),
+    ('Jorge Amado', 58, 4, '2017-02-17');
 
----- ALBUM
 CREATE TABLE IF NOT EXISTS SpotifyClone.album (
     id_album INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
@@ -79,7 +75,6 @@ VALUES
 	('Somewhere Far Beyond', 5, 2007),
 	('I Put A Spell On You', 6, 2012);
 
----- CANÇOES
 CREATE TABLE IF NOT EXISTS SpotifyClone.cancoes (
     id_cancoes INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
@@ -104,7 +99,6 @@ VALUES
 	('Feeling Good', 8, 100, 2012);
 
 
----- HISTORICO
 CREATE TABLE IF NOT EXISTS SpotifyClone.historico (
     id_cancoes INT NOT NULL,
     id_usuario INT NOT NULL,
@@ -135,7 +129,6 @@ VALUES
 	(3, 10, '2015-12-13 08:30:22');
 
 
----- SEGUINDO
 CREATE TABLE IF NOT EXISTS SpotifyClone.seguindo_artistas (
     id_usuario INT NOT NULL,
     id_artista INT NOT NULL,
