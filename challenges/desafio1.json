@@ -6,10 +6,10 @@
   "coluna_plano": "id_plano",
 
   "tabela_historico_de_reproducoes": "historico",
-  "coluna_historico_de_reproducoes": "id_historico",
+  "coluna_historico_de_reproducoes": "id_cancoes",
 
   "tabela_seguindo_artistas": "seguindo_artistas",
-  "coluna_seguindo_artistas": "id_seguindo_artistas",
+  "coluna_seguindo_artistas": "id_usuario",
 
   "tabela_artista": "artistas",
   "coluna_artista": "id_artista",

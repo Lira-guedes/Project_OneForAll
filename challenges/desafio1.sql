@@ -5,23 +5,23 @@ CREATE DATABASE IF NOT EXISTS SpotifyClone;
 CREATE TABLE IF NOT EXISTS SpotifyClone.planos (
     id_plano INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(20) NOT NULL,
-    preço DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY (id_plano),
+    preco DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id_plano)
 ) engine = InnoDB;
 
-INSERT INTO SpotifyClone.planos (nome, preço)
+INSERT INTO SpotifyClone.planos (nome, preco)
 VALUES
   ('gratuito', 0),
-  ('familiar', '7,99'),
-  ('universitário', '5,99'),
-  ('pessoal', '6,99');
+  ('familiar', 7.99),
+  ('universitário', 5.99),
+  ('pessoal', 6.99);
 
 
 ---- ARTISTAS
 CREATE TABLE IF NOT EXISTS SpotifyClone.artistas (
     id_artista INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(40) NOT NULL,
-    PRIMARY KEY (id_artista),
+    PRIMARY KEY (id_artista)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.artistas (nome)
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.album (
     id_artista INT NOT NULL,
     ano_lançamento YEAR NOT NULL,
     PRIMARY KEY (id_album),
-      FOREIGN KEY (id_artista) REFERENCES SpotifyClone.artistas(id_artista),
+      FOREIGN KEY (id_artista) REFERENCES SpotifyClone.artistas(id_artista)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.album (nome, id_artista, ano_lançamento)
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.cancoes (
     duracao INT NOT NULL,
     ano_lançamento YEAR NOT NULL,
     PRIMARY KEY (id_cancoes),
-     FOREIGN KEY (id_album) REFERENCES SpotifyClone.album(id_album),
+     FOREIGN KEY (id_album) REFERENCES SpotifyClone.album(id_album)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.cancoes (nome, id_album, duracao, ano_lançamento)
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS SpotifyClone.seguindo_artistas (
     id_artista INT NOT NULL,
     PRIMARY KEY(id_usuario, id_artista),
     FOREIGN KEY (id_artista) REFERENCES SpotifyClone.artistas(id_artista),
-        FOREIGN KEY (id_usuario) REFERENCES SpotifyClone.usuarios(id_usuario),
+        FOREIGN KEY (id_usuario) REFERENCES SpotifyClone.usuarios(id_usuario)
 ) engine = InnoDB;
 
 INSERT INTO SpotifyClone.seguindo_artistas (id_usuario, id_artista)
